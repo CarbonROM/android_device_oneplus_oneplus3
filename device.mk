@@ -271,6 +271,11 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/power/power_profile.xml:system/etc/power_profile.xml \
+    $(LOCAL_PATH)/power/power_profile_3t.xml:system/etc/power_profile_3t.xml
+
+
 # Power
 PRODUCT_PACKAGES += \
     power.msm8996
