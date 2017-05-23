@@ -43,11 +43,14 @@ public class ProximitySensor implements SensorEventListener {
 
     public ProximitySensor(Context context) {
         mContext = context;
+<<<<<<< HEAD:doze/src/org/carbonrom/settings/doze/ProximitySensor.java
         mSensorManager = (SensorManager)
                 mContext.getSystemService(Context.SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+=======
         mSensorManager = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY, false);
+>>>>>>> 801d309... op3: Doze: Require non-wake up proximity sensor:doze/src/com/cyanogenmod/settings/doze/ProximitySensor.java
     }
 
     @Override
