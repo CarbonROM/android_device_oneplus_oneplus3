@@ -129,10 +129,6 @@ TARGET_CAMERA_DEFAULT_HAL1 := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
-# CM Hardware
-BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
-TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
-
 # CNE and DPM
 BOARD_USES_QCNE := true
 
@@ -162,6 +158,9 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
+
+# Gestures
+TARGET_GESTURES_NODE := "/proc/touchpanel/gesture_enable"
 
 # GPS
 TARGET_NO_RPC := true
@@ -196,7 +195,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 57436708864
 BOARD_FLASH_BLOCK_SIZE := 262144
 
 # Power
-TARGET_POWERHAL_VARIANT := none
+TARGET_POWERHAL_VARIANT := qcom
 
 # RIL
 TARGET_RIL_VARIANT := caf
