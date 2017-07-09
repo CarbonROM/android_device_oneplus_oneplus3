@@ -28,5 +28,11 @@
     "repository": "LineageOS/android_vendor_nxp-nfc_opensource_Nfc",
     "target_path": "vendor/nxp-nfc/opensource/Nfc",
     "revision"   : "cm-14.1"
+  },
+  {
+    "remote"     : "carbon",
+    "repository" : "CarbonROM/android_device_qcom_common",
+    "target_path": "device/qcom/common",
+    "revision"   : "cr-5.1"
   }
 ]
