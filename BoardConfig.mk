@@ -34,6 +34,8 @@ BOARD_VENDOR := oneplus
 
 SDCLANG := true
 
+TARGET_GESTURES_NODE := "/proc/touchpanel/gesture_enable"
+
 # RIL
 TARGET_RIL_VARIANT := caf
 
