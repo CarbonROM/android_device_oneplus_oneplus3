@@ -21,6 +21,16 @@
         android:title="@string/button_swap_title"
         android:summary="@string/button_swap_summary" />
 
+    <Preference
+        android:key="gestures"
+        android:title="@string/enable_gestures_title"
+        android:summary="@string/enable_gestures_summary"
+        android:persistent="false" >
+        <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="org.carbonrom.settings.device"
+                android:targetClass="org.carbonrom.settings.device.ScreenOffGestureSettings" />
+    </Preference>
+
     <PreferenceCategory
         android:title="@string/notification_slider_category_title">
 
