@@ -63,6 +63,15 @@
                 android:resource="@string/buttons_dashboard_summary" />
         </activity>
 
+        <activity
+            android:name=".ScreenOffGestureSettings"
+            android:label="@string/screen_off_gesture_title"
+            android:theme="@android:style/Theme.DeviceDefault.Settings">
+          <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+          </intent-filter>
+        </activity>
+
         <receiver android:name=".Startup"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
             <intent-filter>

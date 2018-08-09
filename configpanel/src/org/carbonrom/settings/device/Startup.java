@@ -17,6 +17,7 @@
 
 package org.carbonrom.settings.device;
 
+import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -34,6 +35,8 @@ import android.util.Log;
 
 import com.android.internal.util.cr.FileUtils;
 import org.carbonrom.settings.device.utils.Constants;
+import org.carbonrom.settings.device.ScreenOffGesture;
+
 
 public class Startup extends BroadcastReceiver {
 
@@ -42,6 +45,14 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         final String action = intent.getAction();
+            if (action.equals(Intent.ACTION_BOOT_COMPLETED)) {
+                    enableComponent(context, ScreenOffGesture.class.getName());
+                    SharedPreferences screenOffGestureSharedPreferences = context.getSharedPreferences(
+                            ScreenOffGesture.GESTURE_SETTINGS, Activity.MODE_PRIVATE);
+                    ScreenOffGesture.enableGestures(
+                            screenOffGestureSharedPreferences.getBoolean(
+                            ScreenOffGesture.PREF_GESTURE_ENABLE, true));
+                }
             // Disable button settings if needed
             if (!hasButtonProcs()) {
                 disableComponent(context, ButtonSettingsActivity.class.getName());
@@ -67,6 +78,7 @@ public class Startup extends BroadcastReceiver {
 
         }
     }
+
 
     static boolean hasButtonProcs() {
         return (FileUtils.fileExists(Constants.NOTIF_SLIDER_TOP_NODE) &&
