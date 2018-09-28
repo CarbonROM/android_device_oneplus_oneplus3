@@ -38,16 +38,11 @@ public class ConfigPanelSearchIndexablesProvider extends SearchIndexablesProvide
     private static final String TAG = "ConfigPanelSearchIndexablesProvider";
 
     public static final int SEARCH_IDX_BUTTON_PANEL = 0;
-    public static final int SEARCH_IDX_GESTURE_PANEL = 1;
-    public static final int SEARCH_IDX_OCLICK_PANEL = 2;
 
     private static SearchIndexableResource[] INDEXABLE_RES = new SearchIndexableResource[]{
             new SearchIndexableResource(1, R.xml.button_panel,
                     ButtonSettingsActivity.class.getName(),
                     R.drawable.ic_settings_additional_buttons),
-            new SearchIndexableResource(1, R.xml.oclick_panel,
-                    BluetoothInputSettings.class.getName(),
-                    R.drawable.ic_oclick_notification),
     };
 
     @Override
