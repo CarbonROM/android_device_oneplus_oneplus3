@@ -17,21 +17,12 @@
 
 package org.carbonrom.settings.device;
 
-import android.app.PendingIntent;
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothManager;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.os.Build;
-import android.os.IBinder;
-import android.os.RemoteException;
 import android.os.ServiceManager;
-import android.os.UserHandle;
-import android.preference.PreferenceManager;
 import android.util.Log;
 
 import com.android.internal.util.cr.FileUtils;
