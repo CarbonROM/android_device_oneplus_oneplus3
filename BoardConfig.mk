@@ -121,6 +121,7 @@ BOARD_USES_QCNE := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
+TARGET_USES_METADATA_AS_FDE_KEY := true
 
 # Display
 BOARD_USES_ADRENO := true
